@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <title>Insert title here</title>
+  <div th:replace="header :: myheader"></div>
 </head>
 <body>
   <div class="container">
@@ -40,13 +33,7 @@
       <button type="submit" class="btn btn-primary">Save</button>
     </form>
   </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="/webjars/jquery/3.4.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/webjars/popper.js/1.15.0/popper.min.js"></script>
-    <script type="text/javascript" src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  
+  <div th:insert="footer :: foot"></div>
 
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="header :: myheader"></div>
+</head>
+<body>
+  <div class="container">
+    <h1><span th:text="${heading}"></span></h1>
+    <table class="table table-striped">
+      <thead>
+        <tr scope="row">
+          <th scope="col">Id </th>
+          <th scope="col">Name </th>
+          <th scope="col">Price </th>
+          <th scope="col">Qty </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr scope="row" th:each="item:${items}">
+          <td th:text="${item.itemId}" />
+          <td th:text="${item.itemName}" />
+          <td th:text="${item.itemPrice}" />
+          <td th:text="${item.itemQty}" />
+          <td>
+            <a class="btn btn-primary" th:href="@{/inventory/edit/{pathitem}(pathitem=${item.itemId})}" role="button">Edit</a>
+            <a class="btn btn-primary" th:href="@{/inventory/delete/{pathitem}(pathitem=${item.itemId})}" role="button" onclick="return confirm('Are you sure?')">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" th:href="@{/inventory/add}" role="button">Add New Item</a>
+  </div>
+  <div th:insert="footer :: foot"></div>
+
+</body>
+</html>
