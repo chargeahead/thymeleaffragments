@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <div th:replace="header :: myheader"></div>
+  <div th:replace="common :: myheader"></div>
 </head>
 <body>
   <div class="container">
@@ -30,7 +30,7 @@
     </table>
     <a class="btn btn-primary btn-lg" th:href="@{/inventory/add}" role="button">Add New Item</a>
   </div>
-  <div th:insert="footer :: foot"></div>
+  <div th:insert="common :: foot"></div>
 
 </body>
 </html>
